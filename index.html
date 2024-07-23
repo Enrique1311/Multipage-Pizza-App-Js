@@ -17,29 +17,63 @@
 		/>
 	</head>
 	<body>
-		<header class="header">
+		<header class="header flex-between padding-x box-shadow">
 			<a
 				href="index.html"
-				class="logo"
+				class="header-logo"
 			>
 				<img
 					src="./img/logo.png"
 					alt="logo"
 				/>
 			</a>
-			<nav class="navbar">
+			<nav class="navbar flex-between">
 				<a href="index.html">Home</a>
 				<a href="about.html">About Us</a>
 				<a href="menu.html">Menu</a>
 				<a href="gallery.html">Gallery</a>
 				<a href="contact.html">Contact</a>
 			</nav>
-			<div class="icons">
-				<div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
-				<div class="login"><i class="fa-solid fa-user"></i></div>
-				<div class="menu"><i class="fa-solid fa-bars"></i></div>
+			<div class="header-icons flex-between">
+				<div class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+				<div class="login-icon"><i class="fa-solid fa-user"></i></div>
+				<div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
 			</div>
+			<aside class="cart-container box-shadow radius">
+				<div class="cart-item flex-between">
+					<img
+						src="./img/pizza.png"
+						alt="Item image"
+					/>
+					<div class="cart-item-content">
+						<h3>Pizza</h3>
+						<span class="quantity">1</span>
+						<span class="multiply">x</span>
+						<span class="price">$20</span>
+					</div>
+					<i class="fa-solid fa-xmark"></i>
+				</div>
+				<div class="cart-item flex-between">
+					<img
+						src="./img/pizza.png"
+						alt="Item image"
+					/>
+					<div class="cart-item-content">
+						<h3>Pizza</h3>
+						<span class="quantity">1</span>
+						<span class="multiply">x</span>
+						<span class="price">$20</span>
+					</div>
+					<i class="fa-solid fa-xmark"></i>
+				</div>
+				<div class="total-item flex-between">
+					<h3 class="total">Total: $40</h3>
+					<a href="#">Checkout cart</a>
+				</div>
+			</aside>
 		</header>
+		<main></main>
+		<footer></footer>
 		<script src="main.js"></script>
 	</body>
 </html>
