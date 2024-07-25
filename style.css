@@ -59,7 +59,7 @@ body {
 }
 
 main {
-	margin-top: 4rem;
+	margin-top: 3.5rem;
 }
 
 /* Main button ********************************************* */
@@ -70,12 +70,13 @@ main {
 	background-color: var(--secondary-color);
 	padding: 0.3rem 1rem;
 	border-radius: var(--box-radius);
+	font-weight: bold;
 	transition: all 0.5s ease;
 }
 
 .main-btn:hover {
 	color: var(--secondary-color);
-	background-color: transparent;
+	background-color: #ffffff9c;
 }
 
 /* Header ************************************************** */
@@ -238,17 +239,27 @@ main {
 /* Home Slider **********************************************  */
 
 .home-slider {
-	width: 100%;
-	max-height: calc(100vh - 10rem);
+	position: relative;
+	width: calc(100vw * 5);
+	max-height: calc(100vh - 5rem);
 	overflow: hidden;
 	position: relative;
-	object-fit: contain;
+	object-fit: cover;
+	display: flex;
+	justify-content: center;
+	z-index: 20;
+	align-items: center;
 }
 
 .home-slider-item img {
 	width: 100%;
-	height: 105%;
+	height: 100%;
 	z-index: 50;
+	transition: all 0.5s ease;
+}
+
+.home-slider-item img.active-slider {
+	transform: scale(1.2);
 }
 
 .home-slider-content {
@@ -261,13 +272,15 @@ main {
 	color: var(--white-color);
 	flex-direction: column;
 	text-align: center;
-	z-index: 100;
 	gap: 1rem;
 }
 
 .home-slider-content h3 {
 	border-radius: var(--box-radius);
 	font-size: 2rem;
+	background-color: #00000096;
+	padding: 1rem;
+	border-radius: var(--box-radius);
 }
 
 .home-slider-content span {
@@ -276,8 +289,6 @@ main {
 
 .slider-left-btn,
 .slider-right-btn {
-	position: absolute;
-	top: calc(50% - 1.5rem);
 	color: var(--secondary-color);
 	border: 1px solid var(--secondary-color);
 	background-color: transparent;
@@ -286,8 +297,9 @@ main {
 	font-size: 1rem;
 	transform: rotate(45deg);
 	margin: 1rem;
-	z-index: 200;
 	transition: all 0.5s ease;
+	z-index: 10;
+	position: absolute;
 }
 
 .slider-left-btn:hover,
@@ -301,8 +313,12 @@ main {
 	transform: rotate(-45deg);
 }
 
+.slider-left-btn {
+	left: 0;
+}
+
 .slider-right-btn {
-	right: 0;
+	right: 80%;
 }
 
 /* Media Queries ***************************************** */
