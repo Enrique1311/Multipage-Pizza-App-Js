@@ -59,7 +59,7 @@ body {
 }
 
 main {
-	margin-top: 3.5rem;
+	margin-top: 3rem;
 }
 
 /* Main button ********************************************* */
@@ -72,11 +72,12 @@ main {
 	border-radius: var(--box-radius);
 	font-weight: bold;
 	transition: all 0.5s ease;
+	cursor: pointer;
 }
 
 .main-btn:hover {
 	color: var(--secondary-color);
-	background-color: #ffffff9c;
+	background-color: transparent;
 }
 
 /* Header ************************************************** */
@@ -92,7 +93,7 @@ main {
 }
 
 .header-logo img {
-	height: 4rem;
+	height: 3rem;
 }
 
 .navbar {
@@ -115,6 +116,7 @@ main {
 	font-size: 1.5rem;
 	color: var(--primary-color);
 	transition: color 0.5s;
+	cursor: pointer;
 }
 
 .navbar a:hover,
@@ -131,7 +133,7 @@ main {
 	background-color: var(--white-color);
 	top: calc(100% + 0.5rem);
 	max-width: 320px;
-	right: calc(-320px + 0.5rem);
+	right: calc(-320px - 1rem);
 	padding: 1rem;
 	color: var(--grey-color);
 	box-shadow: var(--shadow);
@@ -163,6 +165,7 @@ main {
 	font-size: 1.5rem;
 	transition: opacity 0.5s;
 	margin-left: 3rem;
+	cursor: pointer;
 }
 
 .cart-item i:hover {
@@ -221,13 +224,15 @@ main {
 .mobile-nav {
 	position: absolute;
 	max-width: 320px;
-	min-width: 240px;
+	min-width: 280px;
+	min-height: calc(100vh - 5rem);
 	justify-content: flex-start;
-	padding-bottom: 3rem;
+	padding: 3rem 2rem;
+	gap: 2.5rem;
 }
 
 .mobile-nav a {
-	padding: 1rem 0.5rem;
+	padding: 0.5rem;
 	font-weight: bold;
 	color: var(--primary-color);
 }
@@ -240,50 +245,59 @@ main {
 
 .home-slider {
 	position: relative;
-	width: calc(100vw * 5);
-	max-height: calc(100vh - 5rem);
+	width: 100%;
 	overflow: hidden;
+}
+
+.home-slider-content {
 	position: relative;
-	object-fit: cover;
-	display: flex;
-	justify-content: center;
-	z-index: 20;
-	align-items: center;
+	height: 800px;
+}
+
+.home-slider-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease;
 }
 
 .home-slider-item img {
 	width: 100%;
 	height: 100%;
-	z-index: 50;
-	transition: all 0.5s ease;
+	object-fit: cover;
+	object-position: 50% 0;
 }
 
-.home-slider-item img.active-slider {
-	transform: scale(1.2);
+.home-slider-item .active-item {
+	opacity: 1;
+	visibility: visible;
 }
 
-.home-slider-content {
+.home-slider-text {
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: 99%;
 	color: var(--white-color);
 	flex-direction: column;
 	text-align: center;
 	gap: 1rem;
-}
-
-.home-slider-content h3 {
-	border-radius: var(--box-radius);
-	font-size: 2rem;
 	background-color: #00000096;
 	padding: 1rem;
 	border-radius: var(--box-radius);
 }
 
-.home-slider-content span {
+.home-slider-text h3 {
+	border-radius: var(--box-radius);
+	font-size: 2rem;
+}
+
+.home-slider-text span {
 	color: var(--secondary-color);
 }
 
@@ -300,6 +314,7 @@ main {
 	transition: all 0.5s ease;
 	z-index: 10;
 	position: absolute;
+	cursor: pointer;
 }
 
 .slider-left-btn:hover,
@@ -315,10 +330,12 @@ main {
 
 .slider-left-btn {
 	left: 0;
+	top: calc(50% - 0.75rem);
 }
 
 .slider-right-btn {
-	right: 80%;
+	right: 0;
+	top: calc(50% - 0.75rem);
 }
 
 /* Media Queries ***************************************** */
@@ -342,6 +359,14 @@ main {
 	}
 }
 
-@media screen and (min-width: 768px) {
-	/* Header ***********/
+@media screen and (min-width: 900px) {
+	:root {
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	:root {
+		font-size: 22px;
+	}
 }

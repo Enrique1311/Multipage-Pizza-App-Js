@@ -56,18 +56,44 @@ const $sliderLeftBtn = d.querySelector(".slider-left-btn"),
 	$homeSliderTemplate = d.getElementById("home-slider-template").content,
 	$homeSliderFragment = d.createDocumentFragment();
 
-homeSlider.forEach((el) => {
-	$homeSliderTemplate
-		.querySelector(".home-slider-item img")
-		.setAttribute("src", el);
+function createSlider() {
+	console.log();
+	homeSlider.forEach((el, i) => {
+		console.log(i);
 
-	let $sliderClone = d.importNode($homeSliderTemplate, true);
-	$homeSliderFragment.appendChild($sliderClone);
-});
+		if (i === 0) {
+			$homeSliderTemplate
+				.querySelector(".home-slider-item")
+				.classList.add("active-item");
+		}
 
-$homeSlider.appendChild($homeSliderFragment);
+		$homeSliderTemplate
+			.querySelector(".home-slider-item img")
+			.setAttribute("src", el);
 
-$sliderLeftBtn.addEventListener("click", () => {
-	let $firstSlide = d.querySelectorAll(".home-slider-item")[0];
-	console.log($firstSlide);
-});
+		let $sliderClone = d.importNode($homeSliderTemplate, true);
+		$homeSliderFragment.appendChild($sliderClone);
+	});
+
+	$homeSlider.appendChild($homeSliderFragment);
+}
+createSlider();
+
+function moveSlider() {
+	const $allSliderItems = d.querySelectorAll(".home-slider-item");
+	console.log($allSliderItems);
+
+	let i = 0;
+
+	$sliderLeftBtn.addEventListener("click", (e) => {
+		$allSliderItems[i].classList.remove("active-item");
+		i--;
+
+		if (i < 0) {
+			i = $allSliderItems.length - 1;
+		}
+
+		$allSliderItems[i].classList.add("active-item");
+	});
+}
+moveSlider();
