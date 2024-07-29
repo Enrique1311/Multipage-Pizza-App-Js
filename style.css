@@ -272,12 +272,12 @@ main {
 	object-position: 50% 0;
 }
 
-.home-slider-item .active-item {
+.home-slider-item.active-item {
 	opacity: 1;
 	visibility: visible;
 }
 
-.home-slider-text {
+.home-slider-text-container {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -285,11 +285,25 @@ main {
 	right: 0;
 	color: var(--white-color);
 	flex-direction: column;
+	background-color: #00000096;
+}
+
+.home-slider-text {
+	align-items: center;
 	text-align: center;
 	gap: 1rem;
-	background-color: #00000096;
 	padding: 1rem;
 	border-radius: var(--box-radius);
+	transform: translateY(200px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+.home-slider-item.active-item .home-slider-text {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
 }
 
 .home-slider-text h3 {

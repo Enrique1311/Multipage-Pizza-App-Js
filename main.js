@@ -42,11 +42,26 @@ $menuIcon.addEventListener("click", () => {
 // Home Slider *********************
 
 const homeSlider = [
-	"./img/slider-img-1.jpg",
-	"./img/slider-img-2.jpg",
-	"./img/slider-img-3.jpg",
-	"./img/slider-img-4.jpg",
-	"./img/slider-img-5.jpg",
+	{
+		url: "./img/slider-img-1.jpg",
+		text: "The <span>Tastiest</span> Pizza <br /> On The Planet",
+	},
+	{
+		url: "./img/slider-img-2.jpg",
+		text: "Our <span>Pizza Makers</span> Are <br /> Top Professionals",
+	},
+	{
+		url: "./img/slider-img-3.jpg",
+		text: "Products <span>Made With</span> Pride <br /> And Dedication",
+	},
+	{
+		url: "./img/slider-img-4.jpg",
+		text: "We <span>Cook</span> With <br /> Our Wood Oven",
+	},
+	{
+		url: "./img/slider-img-5.jpg",
+		text: "We <span>Deliver</span> Our Pizzas <br /> To Your Home",
+	},
 ];
 
 const $sliderLeftBtn = d.querySelector(".slider-left-btn"),
@@ -57,19 +72,15 @@ const $sliderLeftBtn = d.querySelector(".slider-left-btn"),
 	$homeSliderFragment = d.createDocumentFragment();
 
 function createSlider() {
-	console.log();
 	homeSlider.forEach((el, i) => {
 		console.log(i);
 
-		if (i === 0) {
-			$homeSliderTemplate
-				.querySelector(".home-slider-item")
-				.classList.add("active-item");
-		}
-
 		$homeSliderTemplate
 			.querySelector(".home-slider-item img")
-			.setAttribute("src", el);
+			.setAttribute("src", el.url);
+
+		$homeSliderTemplate.querySelector(".home-slider-text h3").innerHTML =
+			el.text;
 
 		let $sliderClone = d.importNode($homeSliderTemplate, true);
 		$homeSliderFragment.appendChild($sliderClone);
@@ -81,6 +92,7 @@ createSlider();
 
 function moveSlider() {
 	const $allSliderItems = d.querySelectorAll(".home-slider-item");
+	$allSliderItems[0].classList.add("active-item");
 	console.log($allSliderItems);
 
 	let i = 0;
@@ -91,6 +103,17 @@ function moveSlider() {
 
 		if (i < 0) {
 			i = $allSliderItems.length - 1;
+		}
+
+		$allSliderItems[i].classList.add("active-item");
+	});
+
+	$sliderRightBtn.addEventListener("click", (e) => {
+		$allSliderItems[i].classList.remove("active-item");
+		i++;
+
+		if (i > $allSliderItems.length - 1) {
+			i = 0;
 		}
 
 		$allSliderItems[i].classList.add("active-item");
