@@ -254,10 +254,6 @@ main {
 	height: calc(100vh - 50px);
 }
 
-.home-slider-content {
-	position: relative;
-}
-
 .home-slider-item {
 	position: absolute;
 	top: 0;
@@ -363,9 +359,9 @@ main {
 
 /* Home Banner **********************************************  */
 
-.home-banner-content {
+.home-banner {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 	gap: 2rem;
 }
 
@@ -374,20 +370,15 @@ main {
 	border-radius: var(--box-radius);
 	overflow: hidden;
 	text-align: center;
+	background-color: var(--secondary-color);
 }
 
 .home-banner-img {
 	width: 100%;
-}
-
-.home-banner-img img {
-	width: 100%;
-	height: 100%;
 	object-fit: cover;
 }
 
 .home-banner-text {
-	background-color: var(--secondary-color);
 	color: var(--white-color);
 	padding: 1rem;
 }

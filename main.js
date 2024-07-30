@@ -72,9 +72,7 @@ const $sliderLeftBtn = d.querySelector(".slider-left-btn"),
 	$homeSliderFragment = d.createDocumentFragment();
 
 function createSlider() {
-	homeSlider.forEach((el, i) => {
-		console.log(i);
-
+	homeSlider.forEach((el) => {
 		$homeSliderTemplate
 			.querySelector(".home-slider-item img")
 			.setAttribute("src", el.url);
@@ -130,7 +128,7 @@ const homeBanner = [
 	},
 	{
 		url: "./img/banner-2.jpg",
-		text: "Dessert",
+		text: "Desserts",
 	},
 	{
 		url: "./img/banner-3.jpg",
@@ -141,3 +139,21 @@ const homeBanner = [
 		text: "Wines",
 	},
 ];
+
+const createBanners = () => {
+	const $homeBanner = d.querySelector(".home-banner"),
+		$homeBannerTemplate = d.getElementById("home-banner-template").content,
+		$homeBannerFragment = d.createDocumentFragment();
+
+	homeBanner.forEach((el) => {
+		$homeBannerTemplate.querySelector(".home-banner-img").src = el.url;
+		$homeBannerTemplate.querySelector(".home-banner-text").textContent =
+			el.text;
+
+		let $bannerClone = d.importNode($homeBannerTemplate, true);
+		$homeBannerFragment.appendChild($bannerClone);
+	});
+
+	$homeBanner.appendChild($homeBannerFragment);
+};
+createBanners();
