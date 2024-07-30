@@ -141,7 +141,7 @@ const homeBanner = [
 ];
 
 const createBanners = () => {
-	const $homeBanner = d.querySelector(".home-banner"),
+	const $homeBannerContent = d.querySelector(".home-banner-content"),
 		$homeBannerTemplate = d.getElementById("home-banner-template").content,
 		$homeBannerFragment = d.createDocumentFragment();
 
@@ -154,6 +154,43 @@ const createBanners = () => {
 		$homeBannerFragment.appendChild($bannerClone);
 	});
 
-	$homeBanner.appendChild($homeBannerFragment);
+	$homeBannerContent.appendChild($homeBannerFragment);
 };
 createBanners();
+
+const homeSteps = [
+	{
+		url: "./img/steps-1.png",
+		text: "Choose your favorite food",
+	},
+	{
+		url: "./img/steps-2.png",
+		text: "free and fast delivery",
+	},
+	{
+		url: "./img/steps-3.png",
+		text: "easy payments methods",
+	},
+	{
+		url: "./img/steps-4.png",
+		text: "and finally, enjoy your food!",
+	},
+];
+
+const createSteps = () => {
+	const $homeStepsContent = d.querySelector(".home-steps-content"),
+		$homeStepsTemplate = d.getElementById("home-steps-template").content,
+		$homeStepsFragment = d.createDocumentFragment();
+
+	homeSteps.forEach((el) => {
+		$homeStepsTemplate.querySelector(".home-steps-item img").src = el.url;
+		$homeStepsTemplate.querySelector(".home-steps-item h3").textContent =
+			el.text;
+
+		let $stepsClone = d.importNode($homeStepsTemplate, true);
+		$homeStepsFragment.appendChild($stepsClone);
+	});
+
+	$homeStepsContent.appendChild($homeStepsFragment);
+};
+createSteps();
