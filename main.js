@@ -48,15 +48,15 @@ const homeSlider = [
 	},
 	{
 		url: "./img/slider-img-2.jpg",
-		text: "Our <span>Pizza Makers</span> Are <br /> Top Professionals",
+		text: "Our Pizza Makers Are <br /> <span>Top Professionals</span>",
 	},
 	{
 		url: "./img/slider-img-3.jpg",
-		text: "Products <span>Made With</span> Pride <br /> And Dedication",
+		text: "Products Made With <span>Pride <br /> And Dedication</span>",
 	},
 	{
 		url: "./img/slider-img-4.jpg",
-		text: "We <span>Cook</span> With <br /> Our Wood Oven",
+		text: "We Cook With <br /> Our <span>Wood Oven</span>",
 	},
 	{
 		url: "./img/slider-img-5.jpg",
@@ -120,3 +120,24 @@ function moveSlider() {
 	});
 }
 moveSlider();
+
+// Home Banner *********************
+
+const homeBanner = [
+	{
+		url: "./img/banner-1.jpg",
+		text: "Pizza",
+	},
+	{
+		url: "./img/banner-2.jpg",
+		text: "Dessert",
+	},
+	{
+		url: "./img/banner-3.jpg",
+		text: "Pasta",
+	},
+	{
+		url: "./img/banner-4.jpg",
+		text: "Wines",
+	},
+];
