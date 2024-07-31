@@ -39,7 +39,7 @@ $menuIcon.addEventListener("click", () => {
 // **********************************************
 // Home *****************************************
 
-// Home Slider *********************
+// Home Slider Section *********************
 
 const homeSlider = [
 	{
@@ -119,7 +119,7 @@ function moveSlider() {
 }
 moveSlider();
 
-// Home Banner *********************
+// Home Banner Section *********************
 
 const homeBanner = [
 	{
@@ -158,6 +158,8 @@ const createBanners = () => {
 };
 createBanners();
 
+// Home Steps Section *************************************
+
 const homeSteps = [
 	{
 		url: "./img/steps-1.png",
@@ -194,3 +196,74 @@ const createSteps = () => {
 	$homeStepsContent.appendChild($homeStepsFragment);
 };
 createSteps();
+
+// Home Menu Section *************************************
+
+const homeMenu = [
+	{
+		urlImage: "./img/pizza.png",
+		name: "Margarita",
+		detail:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
+		price: "15.00",
+	},
+	{
+		urlImage: "./img/pizza.png",
+		name: "Peperonni",
+		detail:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
+		price: "18.00",
+	},
+	{
+		urlImage: "./img/pizza.png",
+		name: "American",
+		detail:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
+		price: "14.00",
+	},
+	{
+		urlImage: "./img/pizza.png",
+		name: "Italian",
+		detail:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
+		price: "20.00",
+	},
+	{
+		urlImage: "./img/pizza.png",
+		name: "Cheese",
+		detail:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
+		price: "16.00",
+	},
+	{
+		urlImage: "./img/pizza.png",
+		name: "Double Cheese",
+		detail:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
+		price: "21.00",
+	},
+];
+
+const createMenu = () => {
+	const $homeMenuContent = d.querySelector(".home-menu-content"),
+		$homeMenuTemplate = d.getElementById("home-menu-template").content,
+		$homeMenuFragment = d.createDocumentFragment();
+
+	homeMenu.forEach((el) => {
+		$homeMenuTemplate.querySelector(".home-menu-item img").src = el.urlImage;
+		$homeMenuTemplate.querySelector(".home-menu-item h3").textContent = el.name;
+		$homeMenuTemplate.querySelector(".home-menu-item p").textContent =
+			el.detail;
+		$homeMenuTemplate.querySelector(
+			".item-price"
+		).innerHTML = `<h4>$${Math.floor(el.price * 0.8)}.00 <span>$${
+			el.price
+		}</span></h4>`;
+
+		let $menuClone = d.importNode($homeMenuTemplate, true);
+		$homeMenuFragment.appendChild($menuClone);
+	});
+
+	$homeMenuContent.appendChild($homeMenuFragment);
+};
+createMenu();

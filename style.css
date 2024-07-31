@@ -15,7 +15,7 @@
 	--grey-color: #696868;
 	--light-grey-color: #e1dfdf;
 	--white-color: #ffffff;
-	--text-color: #44284f;
+	--text-color: #56246a;
 
 	--shadow: 0 0.1rem 1rem var(--secondary-color);
 	--box-radius: 0.3rem;
@@ -88,7 +88,7 @@ main {
 	border: 2px solid var(--secondary-color);
 	color: var(--white-color);
 	background-color: var(--secondary-color);
-	padding: 0.3rem 1rem;
+	padding: 0.6rem 2rem;
 	border-radius: var(--box-radius);
 	font-weight: bold;
 	transition: all 0.5s ease;
@@ -424,6 +424,57 @@ main {
 	box-shadow: var(--shadow);
 	padding: 1rem;
 	margin-bottom: 0.5rem;
+}
+
+/* Home Menu Section ********************************************/
+
+.home-menu-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	gap: 3rem;
+}
+
+.home-menu-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 0.6rem;
+	padding: 1rem;
+}
+
+.home-menu-item h3 {
+	text-transform: capitalize;
+	color: var(--primary-color);
+	font-size: 1.4rem;
+}
+
+.home-menu-item img {
+	width: 80%;
+	padding: 0.5rem;
+	transition: all 0.3s linear;
+}
+
+.home-menu-item img:hover {
+	scale: 1.1;
+}
+
+.home-menu-item .item-stars {
+	color: var(--primary-color);
+	font-size: 1.2rem;
+}
+
+.home-menu-item .item-price {
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
+.home-menu-item .item-price span {
+	text-decoration: line-through;
+	font-size: 1.1rem;
+	font-weight: 200;
+	opacity: 0.5;
 }
 
 /* Media Queries ***************************************** */
