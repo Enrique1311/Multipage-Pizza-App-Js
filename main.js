@@ -1,7 +1,7 @@
 const d = document;
 
 // **************************************************
-// Header *******************************************
+// ** Header *******************************************
 
 const $cartIcon = d.querySelector(".cart-icon i"),
 	$cartContainer = d.querySelector(".cart-container");
@@ -36,8 +36,11 @@ $menuIcon.addEventListener("click", () => {
 	$cartContainer.classList.remove("active");
 });
 
+// ** This function gets the layout for all the pages
+const getLayout = () => {};
+
 // **********************************************
-// Home *****************************************
+// ** Home Page *****************************************
 
 // Home Slider Section *********************
 
@@ -70,6 +73,8 @@ const $sliderLeftBtn = d.querySelector(".slider-left-btn"),
 	$homeSliderItem = d.querySelector(".home-slider-item"),
 	$homeSliderTemplate = d.getElementById("home-slider-template").content,
 	$homeSliderFragment = d.createDocumentFragment();
+
+console.log($homeSliderTemplate);
 
 function createSlider() {
 	homeSlider.forEach((el) => {
@@ -267,3 +272,6 @@ const createMenu = () => {
 	$homeMenuContent.appendChild($homeMenuFragment);
 };
 createMenu();
+
+// **********************************************
+// ** About Us Page *****************************************
