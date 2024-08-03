@@ -17,7 +17,7 @@
 	--white-color: #ffffff;
 	--text-color: #56246a;
 
-	--shadow: 0 0.1rem 1rem var(--secondary-color);
+	--shadow: 0 0.1rem 1rem #96030352;
 	--box-radius: 0.3rem;
 
 	font-size: 16px;
@@ -78,8 +78,15 @@ main {
 	border-bottom: 1px solid var(--light-grey-color);
 }
 
-.section-title span {
+span {
 	color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-transform: capitalize;
 }
 
 /* Main button ********************************************* */
@@ -93,6 +100,7 @@ main {
 	font-weight: bold;
 	transition: all 0.5s ease;
 	cursor: pointer;
+	text-transform: capitalize;
 }
 
 .main-btn:hover {
@@ -334,7 +342,6 @@ main {
 .home-slider-text h3 {
 	font-size: 2.5rem;
 	text-shadow: 1px 1px 1px #000000;
-	text-transform: capitalize;
 }
 
 .home-slider-text span {
@@ -402,7 +409,6 @@ main {
 .home-banner-text {
 	color: var(--white-color);
 	padding: 1rem;
-	text-transform: capitalize;
 }
 
 /* Home Steps Section **********************************************  */
@@ -554,6 +560,8 @@ footer {
 ** About Us Page ********************************************
 ** **********************************************************/
 
+/* About Heading ************************************************************ */
+
 .about-heading {
 	background-image: url(./img/about-bg.jpg);
 	background-repeat: no-repeat;
@@ -574,10 +582,13 @@ footer {
 	color: var(--primary-color);
 }
 
+/* About Section ************************************************************ */
+
 .about {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	gap: 2rem;
 }
@@ -607,6 +618,77 @@ footer {
 	color: var(--primary-color);
 }
 
+/* About Blog Section ****************************************** */
+
+.blog-title {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+.blog-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+	gap: 3rem;
+}
+
+.blog-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	padding: 1rem;
+	border-radius: var(--box-radius);
+	box-shadow: var(--shadow);
+}
+
+.blog-item-img {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin-bottom: 2rem;
+}
+
+.blog-item img {
+	width: 100%;
+	object-fit: cover;
+	border-radius: var(--box-radius);
+	box-shadow: var(--shadow);
+}
+
+.blog-icons {
+	background-color: var(--primary-color);
+	padding: 0.8rem 1.5rem;
+	display: flex;
+	gap: 1.5rem;
+	border-radius: var(--box-radius);
+	box-shadow: var(--shadow);
+	position: absolute;
+	bottom: 0;
+	transform: translateY(50%);
+}
+
+.blog-icons a {
+	color: var(--white-color);
+	text-transform: capitalize;
+}
+
+.blog-icons i {
+	margin-right: 0.5rem;
+	color: var(--secondary-color);
+}
+
+.blog-item p {
+	margin-bottom: 1rem;
+}
+
+/** ******************************************************* */
+/** Media Queries ***************************************** */
+/** ******************************************************* */
+
 @media screen and (min-width: 600px) {
 	/* About Page */
 	.about {
@@ -622,7 +704,6 @@ footer {
 	}
 }
 
-/* Media Queries ***************************************** */
 @media screen and (min-width: 768px) {
 	:root {
 		font-size: 18px;

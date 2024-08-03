@@ -143,7 +143,7 @@ $menuIcon.addEventListener("click", () => {
 const homeSlider = [
 	{
 		url: "./img/slider-img-1.jpg",
-		text: "The <span>Tastiest</span> Pizza <br /> On The Planet",
+		text: "The <span>tastiest</span> Pizza <br /> On The Planet",
 	},
 	{
 		url: "./img/slider-img-2.jpg",
