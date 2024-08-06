@@ -6,14 +6,14 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-		<title>About</title>
+		<title>About Us</title>
 		<script
 			src="https://kit.fontawesome.com/e3fdf6ef30.js"
 			crossorigin="anonymous"
 		></script>
 		<link
 			rel="stylesheet"
-			href="style.css"
+			href="../../style.css"
 		/>
 	</head>
 	<body class="about-body">
@@ -22,13 +22,13 @@
 			<section class="about-heading">
 				<div class="about-heading-content">
 					<h1>About us</h1>
-					<p><a href="index.html">Home >>></a> About</p>
+					<p><a href="../../index.html">Home >>></a> About</p>
 				</div>
 			</section>
 			<section class="about section-padding">
 				<div class="about-img">
 					<img
-						src="./img/about-image.jpg"
+						src="../../img/about-image.jpg"
 						alt="Image"
 					/>
 				</div>
@@ -56,101 +56,40 @@
 			<section class="section-padding">
 				<h2 class="blog-title">Our <span>blog</span></h2>
 				<div class="blog-container">
-					<article class="blog-item">
-						<div class="blog-item-img">
-							<img
-								src="./img/banner-2.jpg"
-								alt="Image"
-							/>
-							<div class="blog-icons">
-								<a href="#"><i class="fa-solid fa-calendar"></i>05 june, 2024</a
-								><a href="#"> <i class="fa-solid fa-user"></i>by admin</a>
+					<template id="blog-template">
+						<article class="blog-item">
+							<div class="blog-item-img">
+								<img
+									src=""
+									alt="Image"
+								/>
+								<div class="blog-icons">
+									<a
+										href="#"
+										class="blog-date"
+										><i class="fa-solid fa-calendar"></i></a
+									><a
+										href="#"
+										class="blog-user"
+										><i class="fa-solid fa-user"></i
+									></a>
+								</div>
 							</div>
-						</div>
-						<h3>Slices Of Delight: Exploring the world of pizza</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-							atque nisi asperiores? Fugiat aut eos, deserunt saepe, praesentium
-							ratione velit placeat.
-						</p>
-						<a
-							href="#"
-							class="main-btn"
-							>read more</a
-						>
-					</article>
-					<article class="blog-item">
-						<div class="blog-item-img">
-							<img
-								src="./img/banner-2.jpg"
-								alt="Image"
-							/>
-							<div class="blog-icons">
-								<a href="#"><i class="fa-solid fa-calendar"></i>05 june, 2024</a
-								><a href="#"> <i class="fa-solid fa-user"></i>by admin</a>
-							</div>
-						</div>
-						<h3>Slices Of Delight: Exploring the world of pizza</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-							atque nisi asperiores? Fugiat aut eos, deserunt saepe, praesentium
-							ratione velit placeat.
-						</p>
-						<a
-							href="#"
-							class="main-btn"
-							>read more</a
-						>
-					</article>
-					<article class="blog-item">
-						<div class="blog-item-img">
-							<img
-								src="./img/banner-2.jpg"
-								alt="Image"
-							/>
-							<div class="blog-icons">
-								<a href="#"><i class="fa-solid fa-calendar"></i>05 june, 2024</a
-								><a href="#"> <i class="fa-solid fa-user"></i>by admin</a>
-							</div>
-						</div>
-						<h3>Slices Of Delight: Exploring the world of pizza</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-							atque nisi asperiores? Fugiat aut eos, deserunt saepe, praesentium
-							ratione velit placeat.
-						</p>
-						<a
-							href="#"
-							class="main-btn"
-							>read more</a
-						>
-					</article>
-					<article class="blog-item">
-						<div class="blog-item-img">
-							<img
-								src="./img/banner-2.jpg"
-								alt="Image"
-							/>
-							<div class="blog-icons">
-								<a href="#"><i class="fa-solid fa-calendar"></i>05 june, 2024</a
-								><a href="#"> <i class="fa-solid fa-user"></i>by admin</a>
-							</div>
-						</div>
-						<h3>Slices Of Delight: Exploring the world of pizza</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-							atque nisi asperiores? Fugiat aut eos, deserunt saepe, praesentium
-							ratione velit placeat.
-						</p>
-						<a
-							href="#"
-							class="main-btn"
-							>read more</a
-						>
-					</article>
+							<h3 class="blog-title"></h3>
+							<p class="blog-comment"></p>
+							<a
+								href="#"
+								class="main-btn"
+								>read more</a
+							>
+						</article>
+					</template>
 				</div>
 			</section>
 		</main>
-		<script src="main.js"></script>
+		<script
+			src="./about.js"
+			type="module"
+		></script>
 	</body>
 </html>
