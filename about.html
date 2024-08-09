@@ -7,24 +7,20 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>About Us</title>
-		<script
-			src="https://kit.fontawesome.com/e3fdf6ef30.js"
-			crossorigin="anonymous"
-		></script>
+
 		<link
 			rel="stylesheet"
 			href="./styles/style.css"
 		/>
+		<script
+			src="https://kit.fontawesome.com/e3fdf6ef30.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
-	<body class="about-body">
+	<body>
 		<header></header>
 		<main>
-			<section class="about-heading">
-				<div class="about-heading-content">
-					<h1>About us</h1>
-					<p><a href="../../index.html">Home >>></a> About</p>
-				</div>
-			</section>
+			<section class="page-heading"></section>
 			<section class="about section-padding">
 				<div class="about-img">
 					<img
@@ -54,7 +50,7 @@
 				</div>
 			</section>
 			<section class="section-padding">
-				<h2 class="blog-title">Our <span>blog</span></h2>
+				<h2 class="section-title">Our <span>blog</span></h2>
 				<div class="blog-container">
 					<template id="blog-template">
 						<article class="blog-item">
@@ -64,15 +60,20 @@
 									alt="Image"
 								/>
 								<div class="blog-icons">
-									<a
-										href="#"
-										class="blog-date"
-										><i class="fa-solid fa-calendar"></i></a
-									><a
-										href="#"
-										class="blog-user"
-										><i class="fa-solid fa-user"></i
-									></a>
+									<div>
+										<i class="fa-solid fa-calendar"></i>
+										<a
+											href="#"
+											class="blog-date"
+										></a>
+									</div>
+									<div>
+										<i class="fa-solid fa-user"></i>
+										<a
+											href="#"
+											class="blog-user"
+										></a>
+									</div>
 								</div>
 							</div>
 							<h3 class="blog-title"></h3>

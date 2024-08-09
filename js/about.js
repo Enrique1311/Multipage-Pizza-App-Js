@@ -1,4 +1,5 @@
 import { createHeader } from "../helpers/createHeader.js";
+import { pageHeading } from "../helpers/createPageHeading.js";
 
 const d = document;
 
@@ -10,12 +11,16 @@ createHeader();
 // **********************************************
 // ** About Us Page *****************************************
 
+// Page Heading ********************************
+
+pageHeading("About Us");
+
 // Our Log Section ********************************
 
 const blogItems = [
 	{
 		urlImage: "./img/blog-img-1.jpg",
-		date: "1206 2024",
+		date: "jul 06 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
 		comment:
@@ -23,7 +28,7 @@ const blogItems = [
 	},
 	{
 		urlImage: "./img/blog-img-2.jpg",
-		date: "1206 2024",
+		date: "jul 06, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
 		comment:
@@ -31,7 +36,7 @@ const blogItems = [
 	},
 	{
 		urlImage: "./img/blog-img-3.jpg",
-		date: "1206 2024",
+		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
 		comment:
@@ -39,7 +44,7 @@ const blogItems = [
 	},
 	{
 		urlImage: "./img/blog-img-4.jpg",
-		date: "1206 2024",
+		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
 		comment:
@@ -47,7 +52,7 @@ const blogItems = [
 	},
 	{
 		urlImage: "./img/blog-img-5.jpg",
-		date: "1206 2024",
+		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
 		comment:
@@ -55,7 +60,7 @@ const blogItems = [
 	},
 	{
 		urlImage: "./img/blog-img-6.jpg",
-		date: "1206 2024",
+		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
 		comment:
@@ -63,7 +68,7 @@ const blogItems = [
 	},
 	{
 		urlImage: "./img/blog-img-7.jpg",
-		date: "1206 2024",
+		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
 		comment:
@@ -71,7 +76,7 @@ const blogItems = [
 	},
 	{
 		urlImage: "./img/blog-img-8.jpg",
-		date: "1206 2024",
+		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
 		comment:
@@ -79,7 +84,7 @@ const blogItems = [
 	},
 	{
 		urlImage: "./img/blog-img-9.jpg",
-		date: "1206 2024",
+		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
 		comment:
