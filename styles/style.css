@@ -17,7 +17,7 @@
 	--white-color: #ffffff;
 	--text-color: #56246a;
 
-	--shadow: 0 0.1rem 1rem #96030352;
+	--shadow: 0 0.1rem 1rem #2e2d2d52;
 	--box-radius: 0.3rem;
 
 	font-size: 16px;
@@ -584,8 +584,8 @@ footer {
 }
 
 /** *********************************************************
-** About Us Page ********************************************
-** **********************************************************/
+/** About Us Page ********************************************
+/** **********************************************************/
 
 /* About Section ************************************************************ */
 
@@ -690,9 +690,59 @@ footer {
 	margin-bottom: 0;
 }
 
-/** ******************************************************* */
-/** Media Queries ***************************************** */
-/** ******************************************************* */
+/** **********************************************************
+/** Menu Page ************************************************
+/** **********************************************************/
+
+.menu-category {
+	width: 100%;
+	margin-bottom: 2rem;
+	border-radius: var(--box-radius);
+}
+
+.menu-category-title {
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	text-align: center;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border-radius: var(--box-radius);
+}
+
+.menu-category-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+	gap: 1rem;
+}
+
+.menu-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem 1.5rem;
+	border-radius: var(--box-radius);
+	box-shadow: var(--shadow);
+}
+
+.menu-item-name {
+	width: 100%;
+}
+
+.menu-item-name h3 {
+	margin-bottom: 0.3rem;
+}
+
+.item-price {
+	color: var(--secondary-color);
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/** ******************************************************* 
+/** Media Queries ***************************************** 
+/** *******************************************************/
 
 @media screen and (min-width: 600px) {
 	/* About Page */

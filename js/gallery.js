@@ -1,5 +1,6 @@
 import { createHeader } from "../helpers/createHeader.js";
 import { pageHeading } from "../helpers/createPageHeading.js";
+import { createFooter } from "../helpers/createFooter.js";
 
 const d = document;
 
@@ -8,6 +9,12 @@ const d = document;
 
 createHeader();
 
-// Page Heading ********************************
+// **************************************************
+// ** Page Heading ********************************
 
 pageHeading("Gallery");
+
+// **************************************************
+// ** Footer *******************************************
+
+createFooter();

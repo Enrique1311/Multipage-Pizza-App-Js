@@ -1,11 +1,16 @@
+import { createHeader } from "../helpers/createHeader.js";
+import { createFooter } from "../helpers/createFooter.js";
 const d = document;
 
 // **************************************************
 // ** Header *******************************************
 
-import { createHeader } from "../helpers/createHeader.js";
-
 createHeader();
+
+// **************************************************
+// ** Footer *******************************************
+
+createFooter();
 
 // **********************************************
 // ** Home Page *****************************************
@@ -96,13 +101,14 @@ const homeBanner = [
 		text: "Pizza",
 	},
 	{
-		url: "./img/banner-2.jpg",
-		text: "Desserts",
-	},
-	{
 		url: "./img/banner-3.jpg",
 		text: "Pasta",
 	},
+	{
+		url: "./img/banner-2.jpg",
+		text: "Desserts",
+	},
+
 	{
 		url: "./img/banner-4.jpg",
 		text: "Wines",
