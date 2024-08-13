@@ -696,7 +696,7 @@ footer {
 
 .menu-category {
 	width: 100%;
-	margin-bottom: 2rem;
+	margin-bottom: 4rem;
 	border-radius: var(--box-radius);
 }
 
@@ -712,7 +712,7 @@ footer {
 .menu-category-content {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-	gap: 1rem;
+	gap: 2rem;
 }
 
 .menu-item {
@@ -720,8 +720,15 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	gap: 1rem;
+	background-color: var(--white-color);
 	padding: 1rem 1.5rem;
 	border-radius: var(--box-radius);
+	transition: all 0.3s linear;
+	border: 1px solid var(--light-grey-color);
+}
+
+.menu-item:hover {
+	transform: scale(1.1);
 	box-shadow: var(--shadow);
 }
 
