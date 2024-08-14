@@ -26,10 +26,10 @@ export const createHeader = () => {
 				<div class="header-icons flex-between">
 					<div class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></div>
 					<div class="login-icon"><i class="fa-solid fa-user"></i></div>
-					<div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+					<div class="menu-icon"></div>
 				</div>
-				<aside class="cart-container flex-col aside-container">
-					<h3 class="cart-title">Shopping Cart</h3>
+				<aside class="cart-container flex-center aside-container">
+					<h3 class="aside-title"><i class="fa-solid fa-circle-xmark"></i>Shopping Cart</h3>
 					<div class="cart-item flex-between">
 						<img
 							src="./img/pizza.png"
@@ -65,9 +65,9 @@ export const createHeader = () => {
 				</aside>
 				<form
 					action=""
-					class="login-form flex-col aside-container"
+					class="login-form flex-center aside-container"
 				>
-					<h3>Login form</h3>
+					<h3 class="aside-title"><i class="fa-solid fa-circle-xmark"></i>Login form</h3>
 					<input
 						type="email"
 						class="form-input"
@@ -129,10 +129,21 @@ export const createHeader = () => {
 	});
 
 	// Mobile Menu *******
+	const drawMenuIcon = () => {
+		// setTimeout(() => {
+		if ($mobileNav.classList.contains("active")) {
+			$menuIcon.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+		} else {
+			$menuIcon.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+		}
+		// }, 400);
+	};
+	drawMenuIcon();
 
 	$menuIcon.addEventListener("click", () => {
 		$mobileNav.classList.toggle("active");
 		$loginForm.classList.remove("active");
 		$cartContainer.classList.remove("active");
+		drawMenuIcon();
 	});
 };

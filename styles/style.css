@@ -61,7 +61,7 @@ body {
 }
 
 .section-padding {
-	padding: 3rem 5% 3rem 5%;
+	padding: 2rem 5% 2rem 5%;
 }
 
 main {
@@ -189,7 +189,27 @@ h4 {
 	box-shadow: var(--shadow);
 	border-radius: var(--box-radius);
 	text-align: center;
+	flex-direction: column;
 	transition: all 0.5s linear;
+}
+
+.aside-title {
+	border-bottom: 1px solid var(--light-grey-color);
+	padding-bottom: 0.5rem;
+	width: 100%;
+	text-align: left;
+	color: var(--secondary-color);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 1.2rem;
+}
+
+.aside-title i {
+	margin-right: 0.3rem;
+	color: var(--secondary-color);
+	font-size: 1.4rem;
+	cursor: pointer;
 }
 
 /* Shopping Cart ******************************************** */
@@ -197,13 +217,6 @@ h4 {
 .cart-container {
 	color: var(--grey-color);
 	overflow: hidden;
-}
-
-.cart-title {
-	border-bottom: 1px solid var(--light-grey-color);
-	padding-bottom: 1rem;
-	width: 100%;
-	text-align: center;
 }
 
 .cart-item {
@@ -263,6 +276,8 @@ h4 {
 .login-form {
 	gap: 1rem;
 	color: var(--secondary-color);
+	flex-direction: column;
+	min-width: 280px;
 }
 
 .active {
@@ -296,6 +311,25 @@ h4 {
 
 .mobile-nav a:hover {
 	color: var(--primary-color);
+}
+
+.menu-icon {
+	width: 2rem;
+}
+
+.menu-icon i {
+	font-size: 1.8rem;
+	animation: menu-icon-anim 0.5s linear;
+}
+
+@keyframes menu-icon-anim {
+	0% {
+		rotate: 360deg;
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 /** *******************************************************
@@ -720,7 +754,6 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	gap: 0.5rem;
-	font-size: 0.8rem;
 	background-color: var(--white-color);
 	padding: 1rem;
 	border-radius: var(--box-radius);
@@ -740,6 +773,12 @@ footer {
 
 .menu-item-name h3 {
 	margin-bottom: 0.3rem;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.menu-item-name p {
+	font-size: 0.8rem;
 }
 
 .item-price {
@@ -747,6 +786,7 @@ footer {
 	height: 100%;
 	display: flex;
 	align-items: center;
+	font-size: 0.8rem;
 }
 
 /** ******************************************************* 
