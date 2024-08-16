@@ -7,7 +7,7 @@ export const pageHeading = (title) => {
 	$pageHeading.innerHTML = `
         <div class="heading-content">
 			<h1>${title}</h1>
-			<p><a href="../../index.html">Home >>></a></p>
+			<a href="../../index.html">Home >>></a>
 		</div>
     `;
 };

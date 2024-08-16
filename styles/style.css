@@ -123,12 +123,21 @@ h4 {
 	background-color: rgba(0, 0, 0, 0.6);
 	width: 100%;
 	height: 100%;
-	padding: 3rem;
+	padding: 4rem 3rem 3rem 3rem;
+
 	color: var(--white-color);
+}
+
+.heading-content h1 {
+	margin-bottom: 0.5rem;
 }
 
 .heading-content a {
 	color: var(--primary-color);
+}
+
+.heading-content a:hover {
+	opacity: 0.6;
 }
 
 /* Header ************************************************** */
@@ -823,6 +832,63 @@ footer {
 .close-modal-icon {
 	font-size: 1.8rem;
 	cursor: pointer;
+}
+
+.close-modal-icon:hover {
+	opacity: 0.6;
+}
+
+/** *******************************************************
+** Home Page **********************************************
+** ********************************************************/
+
+.gallery-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 2rem;
+}
+
+.gallery-container a {
+	height: 20rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.gallery-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery-plus-bg {
+	position: absolute;
+	background-color: #00000083;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+}
+
+.gallery-container a:hover .gallery-plus-bg {
+	opacity: 1;
+}
+
+.gallery-plus-icon {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	border: 2px solid var(--primary-color);
+	transition: transform 0.3s linear;
+}
+
+.gallery-plus-icon:hover {
+	transform: scale(1.2);
+}
+
+.gallery-plus-icon i {
+	color: var(--primary-color);
+	font-size: 2rem;
 }
 
 /** ******************************************************* 
