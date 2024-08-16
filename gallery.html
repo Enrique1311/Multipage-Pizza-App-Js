@@ -11,35 +11,30 @@
 			src="https://kit.fontawesome.com/e3fdf6ef30.js"
 			crossorigin="anonymous"
 		></script>
+
 		<link
 			rel="stylesheet"
 			href="./styles/style.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css"
 		/>
 	</head>
 	<body>
 		<header></header>
 		<main>
 			<section class="page-heading"></section>
-			<section class="gallery-container section-padding">
-				<template id="gallery-template">
-					<a href="">
-						<img
-							src=""
-							alt="Image"
-						/>
-						<div class="gallery-plus-bg flex-center">
-							<div class="gallery-plus-icon flex-center">
-								<i class="fa-solid fa-plus"></i>
-							</div>
-						</div>
-					</a>
-				</template>
-			</section>
+			<section class="gallery section-padding"></section>
 			<footer></footer>
 		</main>
 		<script
 			src="./js/gallery.js"
 			type="module"
 		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+		<!-- <script>
+			lightGallery(document.querySelector(".gallery"));
+		</script> -->
 	</body>
 </html>
