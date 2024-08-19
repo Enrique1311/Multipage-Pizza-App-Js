@@ -24,7 +24,7 @@ export const createHeader = () => {
 					<a href="contact.html">Contact</a>
 				</nav>
 				<div class="header-icons flex-between">
-					<div class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+					<div class="cart-icon"><i class="fa-solid fa-cart-shopping"></i><p class="cart-amount flex-center">10</p></div>
 					<div class="login-icon"><i class="fa-solid fa-user"></i></div>
 					<div class="menu-icon"></div>
 				</div>

@@ -23,13 +23,14 @@ const $winesContent = d.getElementById("wines");
 
 const writeMenuItems = (el, content) => {
 	content.innerHTML += `
-		<article class="menu-item">
+		<article class="menu-item flex-col">
 			<div class="menu-item-name">
 				<h3>${el.name}</h3>
 				<p>${el.ingredients}</p>
 			</div>
-			<div class="item-price">
+			<div class="item-price flex-center">
 				<h2>$${el.price}</h2>
+				<button class="main-btn">Add to cart</button>
 			</div>
 		</article>
 `;

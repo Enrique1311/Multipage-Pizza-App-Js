@@ -215,17 +215,20 @@ h4 {
 	font-size: 1.2rem;
 }
 
-.close-cart i,
-.close-login i {
-	color: var(--secondary-color);
-	font-size: 1.4rem;
-	cursor: pointer;
-	margin-bottom: 0.5rem;
+.cart-icon {
+	position: relative;
 }
 
-.close-cart i:hover,
-.close-login i:hover {
-	color: var(--primary-color);
+.cart-amount {
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	width: 1.3rem;
+	height: 1.3rem;
+	border-radius: 50%;
+	position: absolute;
+	right: -0.5rem;
+	margin-top: -3rem;
+	font-size: 0.8rem;
 }
 
 /* Shopping Cart ******************************************** */
@@ -290,6 +293,19 @@ h4 {
 
 .cart-container .main-btn {
 	width: 100%;
+}
+
+.close-cart i,
+.close-login i {
+	color: var(--secondary-color);
+	font-size: 1.4rem;
+	cursor: pointer;
+	margin-bottom: 0.5rem;
+}
+
+.close-cart i:hover,
+.close-login i:hover {
+	color: var(--primary-color);
 }
 
 /* Login Form ********************************************** */
@@ -771,9 +787,6 @@ footer {
 }
 
 .menu-item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	gap: 0.5rem;
 	background-color: var(--white-color);
 	padding: 1rem;
@@ -781,6 +794,7 @@ footer {
 	transition: transform 0.3s linear;
 	box-shadow: var(--shadow);
 	border: 1px solid var(--light-grey-color);
+	text-align: center;
 }
 
 .menu-item:hover {
@@ -804,10 +818,11 @@ footer {
 
 .item-price {
 	color: var(--secondary-color);
+	width: 100%;
 	height: 100%;
-	display: flex;
-	align-items: center;
 	font-size: 0.8rem;
+	flex-direction: column;
+	gap: 0.5rem;
 }
 
 .modal-container {
@@ -914,10 +929,20 @@ footer {
 	box-shadow: var(--shadow);
 	border-radius: var(--box-radius);
 	width: 100%;
+	color: var(--text-color);
 }
 
+.contact-item div {
+	cursor: pointer;
+	transition: all 0.3s linear;
+}
+
+.contact-item div:hover {
+	transform: scale(1.2);
+	color: var(--white-color);
+}
 .contact-icon {
-	background-color: var(--light-grey-color);
+	background-color: var(--primary-color);
 	width: 2.5rem;
 	height: 2.5rem;
 	border-radius: 50%;
@@ -928,6 +953,7 @@ footer {
 	box-shadow: var(--shadow);
 	border-radius: var(--box-radius);
 	padding: 2rem;
+	background-color: var(--light-grey-color);
 }
 
 .contact-form {
