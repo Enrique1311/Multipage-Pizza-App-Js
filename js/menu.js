@@ -1,6 +1,7 @@
 import { createHeader } from "../helpers/createHeader.js";
 import { pageHeading } from "../helpers/createPageHeading.js";
 import { createFooter } from "../helpers/createFooter.js";
+import { addToCart } from "../helpers/cartService.js";
 
 // Header *******************************************
 createHeader();
@@ -21,34 +22,27 @@ const $pastasContent = d.getElementById("pastas");
 const $dessertsContent = d.getElementById("desserts");
 const $winesContent = d.getElementById("wines");
 
-const writeMenuItems = (el, content) => {
-	content.innerHTML += `
-		<article class="menu-item flex-col">
-			<div class="menu-item-name">
-				<h3>${el.name}</h3>
-				<p>${el.ingredients}</p>
-			</div>
-			<div class="item-price flex-center">
-				<h2>$${el.price}</h2>
-				<button class="main-btn">Add to cart</button>
-			</div>
-		</article>
-`;
-};
+const createMenuItem = (prod, content) => {
+	const $newProduct = d.createElement("article");
 
-const createModal = () => {
-	const $menuItems = d.querySelectorAll(".menu-item"),
-		$modalContainer = d.querySelector(".modal-container"),
-		$closeModalIcon = d.querySelector(".close-modal-icon");
+	$newProduct.classList.add("menu-item");
+	$newProduct.classList.add("flex-col");
 
-	$menuItems.forEach((el) => {
-		el.addEventListener("click", () => {
-			$modalContainer.classList.add("open");
-		});
-	});
+	$newProduct.innerHTML = `
+		<div class="menu-item-name">
+			<h3>${prod.name}</h3>
+			<p>${prod.ingredients}</p>
+		</div>
+		<div class="item-price flex-center">
+			<h2>$${prod.price}</h2>
+			<button class="main-btn">Add to cart</button>
+		</div>
+	`;
 
-	$closeModalIcon.addEventListener("click", () => {
-		$modalContainer.classList.remove("open");
+	content.appendChild($newProduct);
+
+	$newProduct.querySelector("button").addEventListener("click", () => {
+		addToCart(prod);
 	});
 };
 
@@ -59,22 +53,20 @@ const getMenu = async () => {
 		if (!res.ok) throw { statusText: res.statusText };
 
 		data.pizzas.forEach((el) => {
-			writeMenuItems(el, $pizzasContent);
+			createMenuItem(el, $pizzasContent);
 		});
 
 		data.pastas.forEach((el) => {
-			writeMenuItems(el, $pastasContent);
+			createMenuItem(el, $pastasContent);
 		});
 
 		data.desserts.forEach((el) => {
-			writeMenuItems(el, $dessertsContent);
+			createMenuItem(el, $dessertsContent);
 		});
 
 		data.wines.forEach((el) => {
-			writeMenuItems(el, $winesContent);
+			createMenuItem(el, $winesContent);
 		});
-
-		createModal();
 	} catch (err) {
 		let message = err.statusText || "Not Found";
 		$menu.innerHTML = `<p><b>Error: ${message}</b></p>`;
