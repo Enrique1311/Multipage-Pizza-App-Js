@@ -17,7 +17,7 @@ pageHeading("About Us");
 
 const blogItems = [
 	{
-		urlImage: "./img/blog-img-1.jpg",
+		urlImage: "../assets/imgs/blog-img-1.jpg",
 		date: "jul 06 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
@@ -25,7 +25,7 @@ const blogItems = [
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 	},
 	{
-		urlImage: "./img/blog-img-2.jpg",
+		urlImage: "../assets/imgs/blog-img-2.jpg",
 		date: "jul 06, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
@@ -33,7 +33,7 @@ const blogItems = [
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 	},
 	{
-		urlImage: "./img/blog-img-3.jpg",
+		urlImage: "../assets/imgs/blog-img-3.jpg",
 		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
@@ -41,7 +41,7 @@ const blogItems = [
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 	},
 	{
-		urlImage: "./img/blog-img-4.jpg",
+		urlImage: "../assets/imgs/blog-img-4.jpg",
 		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
@@ -49,7 +49,7 @@ const blogItems = [
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 	},
 	{
-		urlImage: "./img/blog-img-5.jpg",
+		urlImage: "../assets/imgs/blog-img-5.jpg",
 		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
@@ -57,7 +57,7 @@ const blogItems = [
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 	},
 	{
-		urlImage: "./img/blog-img-6.jpg",
+		urlImage: "../assets/imgs/blog-img-6.jpg",
 		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
@@ -65,7 +65,7 @@ const blogItems = [
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 	},
 	{
-		urlImage: "./img/blog-img-7.jpg",
+		urlImage: "../assets/imgs/blog-img-7.jpg",
 		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
@@ -73,7 +73,7 @@ const blogItems = [
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 	},
 	{
-		urlImage: "./img/blog-img-8.jpg",
+		urlImage: "../assets/imgs/blog-img-8.jpg",
 		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",
@@ -81,7 +81,7 @@ const blogItems = [
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 	},
 	{
-		urlImage: "./img/blog-img-9.jpg",
+		urlImage: "../assets/imgs/blog-img-9.jpg",
 		date: "jul 12, 2024",
 		user: "admin",
 		title: "Slices Of Delight: Exploring the world of pizza",

@@ -112,7 +112,7 @@ h4 {
 /* Page Heading ************************************************************ */
 
 .page-heading {
-	background-image: url(../img/about-bg.jpg);
+	background-image: url(../assets/imgs/heading-top-img.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;

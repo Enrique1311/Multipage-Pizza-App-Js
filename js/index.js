@@ -12,23 +12,23 @@ createFooter();
 
 const homeSlider = [
 	{
-		url: "./img/slider-img-1.jpg",
+		url: "../assets/imgs/slider-img-1.jpg",
 		text: "The <span>tastiest</span> Pizza <br /> On The Planet",
 	},
 	{
-		url: "./img/slider-img-2.jpg",
+		url: "../assets/imgs/slider-img-2.jpg",
 		text: "Our Pizza Makers Are <br /> <span>Top Professionals</span>",
 	},
 	{
-		url: "./img/slider-img-3.jpg",
+		url: "../assets/imgs/slider-img-3.jpg",
 		text: "Products Made With <span>Pride <br /> And Dedication</span>",
 	},
 	{
-		url: "./img/slider-img-4.jpg",
+		url: "../assets/imgs/slider-img-4.jpg",
 		text: "We Cook With <br /> Our <span>Wood Oven</span>",
 	},
 	{
-		url: "./img/slider-img-5.jpg",
+		url: "../assets/imgs/slider-img-5.jpg",
 		text: "We <span>Deliver</span> Our Pizzas <br /> To Your Home",
 	},
 ];
@@ -90,20 +90,20 @@ moveSlider();
 
 const homeBanner = [
 	{
-		url: "./img/banner-1.jpg",
+		url: "../assets/imgs/banner-1.jpg",
 		text: "Pizza",
 	},
 	{
-		url: "./img/banner-3.jpg",
+		url: "../assets/imgs/banner-3.jpg",
 		text: "Pasta",
 	},
 	{
-		url: "./img/banner-2.jpg",
+		url: "../assets/imgs/banner-2.jpg",
 		text: "Desserts",
 	},
 
 	{
-		url: "./img/banner-4.jpg",
+		url: "../assets/imgs/banner-4.jpg",
 		text: "Wines",
 	},
 ];
@@ -130,19 +130,19 @@ createBanners();
 
 const homeSteps = [
 	{
-		url: "./img/steps-1.png",
+		url: "../assets/imgs/steps-1.png",
 		text: "Choose your favorite food",
 	},
 	{
-		url: "./img/steps-2.png",
+		url: "../assets/imgs/steps-2.png",
 		text: "free and fast delivery",
 	},
 	{
-		url: "./img/steps-3.png",
+		url: "../assets/imgs/steps-3.png",
 		text: "easy payments methods",
 	},
 	{
-		url: "./img/steps-4.png",
+		url: "../assets/imgs/steps-4.png",
 		text: "and finally, enjoy your food!",
 	},
 ];
@@ -169,42 +169,42 @@ createSteps();
 
 const homeMenu = [
 	{
-		urlImage: "./img/pizza.png",
+		urlImage: "../assets/imgs/pizza.png",
 		name: "Margarita",
 		detail:
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 		price: "15.00",
 	},
 	{
-		urlImage: "./img/pizza.png",
+		urlImage: "../assets/imgs/pizza.png",
 		name: "Peperonni",
 		detail:
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 		price: "18.00",
 	},
 	{
-		urlImage: "./img/pizza.png",
+		urlImage: "../assets/imgs/pizza.png",
 		name: "American",
 		detail:
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 		price: "14.00",
 	},
 	{
-		urlImage: "./img/pizza.png",
+		urlImage: "../assets/imgs/pizza.png",
 		name: "Italian",
 		detail:
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 		price: "20.00",
 	},
 	{
-		urlImage: "./img/pizza.png",
+		urlImage: "../assets/imgs/pizza.png",
 		name: "Cheese",
 		detail:
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",
 		price: "16.00",
 	},
 	{
-		urlImage: "./img/pizza.png",
+		urlImage: "../assets/imgs/pizza.png",
 		name: "Double Cheese",
 		detail:
 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quo dolore esse ab eligendi, repudiandae minus perspiciatis ad quae aliquid et odit cum placeat optio reiciendis.",

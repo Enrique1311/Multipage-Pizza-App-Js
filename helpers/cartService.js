@@ -1,3 +1,5 @@
+import { updateCartData } from "./updateCartData.js";
+
 const openModal = (product) => {
 	const $modalContainer = document.querySelector(".modal-container");
 
@@ -21,6 +23,8 @@ const getNewProduct = (product) => {
 };
 
 export const addToCart = (product) => {
+	openModal(product);
+
 	let memory = JSON.parse(localStorage.getItem("cartItems"));
 	let finalProdQuantity;
 
@@ -28,6 +32,7 @@ export const addToCart = (product) => {
 		const newProduct = getNewProduct(product);
 		localStorage.setItem("cartItems", JSON.stringify([newProduct]));
 		finalProdQuantity = 1;
+		updateCartData();
 	} else {
 		const productIndex = memory.findIndex((item) => item.id === product.id);
 		const newMemory = memory;
@@ -41,8 +46,7 @@ export const addToCart = (product) => {
 			finalProdQuantity = newMemory[productIndex].quantity;
 		}
 		localStorage.setItem("cartItems", JSON.stringify(newMemory));
+		updateCartData();
 		return finalProdQuantity;
 	}
-	setCartNumber(product);
-	openModal(product);
 };

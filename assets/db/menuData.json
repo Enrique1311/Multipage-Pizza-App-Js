@@ -3,6 +3,7 @@
 		{
 			"id": 1,
 			"name": "Margherita",
+			"itemImg": "../img/pizza.png",
 			"ingredients": "Tomato Sauce, Mozzarella Cheese, Basil and Olive Oil",
 			"price": 12.99
 		},
@@ -77,6 +78,7 @@
 		{
 			"id": 13,
 			"name": "Penne Arrabbiata",
+
 			"ingredients": "Penne, Tomato Sauce, Garlic, Red Chili Flakes, Olive Oil and Parsley",
 			"price": 13.99
 		},

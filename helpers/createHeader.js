@@ -1,18 +1,20 @@
 // **************************************************
 // ** Header *******************************************
 
+import { updateCartData } from "./updateCartData.js";
+
 export const createHeader = () => {
 	const d = document;
 	const $header = d.querySelector("header");
 
 	$header.innerHTML = `
-		<div class="header flex-between padding-x">
+			<div class="header flex-between padding-x">
 				<a
 					href="index.html"
 					class="header-logo"
 				>
 					<img
-						src="./img/logo.png"
+						src="../assets/imgs/logo.png"
 						alt="logo"
 					/>
 				</a>
@@ -35,7 +37,7 @@ export const createHeader = () => {
 					<h3 class="aside-title">Shopping Cart</h3>
 					<div class="cart-item flex-between">
 						<img
-							src="./img/pizza.png"
+							src="../assets/imgs/pizza.png"
 							alt="Item image"
 						/>
 						<div class="cart-item-content">
@@ -48,7 +50,7 @@ export const createHeader = () => {
 					</div>
 					<div class="cart-item flex-between">
 						<img
-							src="./img/pizza.png"
+							src="../assets/imgs/pizza.png"
 							alt="Item image"
 						/>
 						<div class="cart-item-content">
@@ -123,6 +125,8 @@ export const createHeader = () => {
 		$mobileNav = d.querySelector(".mobile-nav");
 
 	// Shopping Cart *******
+
+	updateCartData();
 
 	$cartIcon.addEventListener("click", () => {
 		$cartContainer.classList.toggle("active");
