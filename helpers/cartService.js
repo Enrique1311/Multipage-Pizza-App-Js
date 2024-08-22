@@ -1,10 +1,21 @@
-import { updateCartData } from "./updateCartData.js";
+export const updateCartData = () => {
+	const $cartAmount = document.querySelector(".cart-amount"),
+		locStorMemory = JSON.parse(localStorage.getItem("cartItems"));
+
+	if (locStorMemory) {
+		const total = locStorMemory.reduce(
+			(acum, current) => acum + current.quantity,
+			0
+		);
+		$cartAmount.innerText = total;
+	}
+};
 
 const openModal = (product) => {
 	const $modalContainer = document.querySelector(".modal-container");
 
 	$modalContainer.querySelector(".modal").innerHTML = `
-		<img src="./img/pizza-box.png" alt="pizza box"/>
+		<img src="../assets/imgs/pizza-box.png" alt="pizza box"/>
 		<h2>${product.name}</h2>
 		<p>was added to the cart...</p>
 	`;

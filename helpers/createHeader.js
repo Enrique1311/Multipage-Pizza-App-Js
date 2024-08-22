@@ -40,26 +40,17 @@ export const createHeader = () => {
 							src="../assets/imgs/pizza.png"
 							alt="Item image"
 						/>
+						<div class="cart-plus-subt-btns">
+							<div class="cart-plus-btn"><i class="fa-solid fa-caret-up"></i></div>
+							<div class="cart-subt-btn"><i class="fa-solid fa-caret-down"></i></div>
+						</div>
 						<div class="cart-item-content">
 							<h3>Pizza</h3>
 							<span class="quantity">1</span>
 							<span class="multiply">x</span>
 							<span class="price">$20</span>
 						</div>
-						<i class="fa-solid fa-xmark"></i>
-					</div>
-					<div class="cart-item flex-between">
-						<img
-							src="../assets/imgs/pizza.png"
-							alt="Item image"
-						/>
-						<div class="cart-item-content">
-							<h3>Pizza</h3>
-							<span class="quantity">1</span>
-							<span class="multiply">x</span>
-							<span class="price">$20</span>
-						</div>
-						<i class="fa-solid fa-xmark"></i>
+						<div class="del-item-btn"><i class="fa-solid fa-xmark"></i></div>
 					</div>
 					<h3 class="total">Total: $40</h3>
 					<a

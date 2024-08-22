@@ -248,14 +248,14 @@ h4 {
 	text-align: center;
 }
 
-.cart-item i {
+.cart-item .del-item-btn i {
 	font-size: 1.5rem;
 	transition: opacity 0.5s;
 	margin-left: 3rem;
 	cursor: pointer;
 }
 
-.cart-item i:hover {
+.cart-item .del-item-btn i:hover {
 	opacity: 0.4;
 }
 
@@ -282,6 +282,18 @@ h4 {
 
 .cart-item-content .multiply {
 	margin: 0 0.3rem;
+}
+
+.cart-plus-subt-btns i {
+	font-size: 1.3rem;
+	cursor: pointer;
+	color: var(--text-color);
+	transition: opacity 0.3s linear;
+	padding: 0 0.5rem;
+}
+
+.cart-plus-subt-btns i:hover {
+	opacity: 0.5;
 }
 
 .cart-container .total {
