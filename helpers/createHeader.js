@@ -2,6 +2,7 @@
 // ** Header *******************************************
 
 import { updateCartData } from "./updateCartData.js";
+import { createCartContent } from "./cartService.js";
 
 export const createHeader = () => {
 	const d = document;
@@ -33,31 +34,11 @@ export const createHeader = () => {
 				<aside class="cart-container flex-center aside-container">
 					<div class="close-cart">
 						<i class="fa-solid fa-circle-xmark"></i>
-					</div>
+					</div>					
 					<h3 class="aside-title">Shopping Cart</h3>
-					<div class="cart-item flex-between">
-						<img
-							src="../assets/imgs/pizza.png"
-							alt="Item image"
-						/>
-						<div class="cart-plus-subt-btns">
-							<div class="cart-plus-btn"><i class="fa-solid fa-caret-up"></i></div>
-							<div class="cart-subt-btn"><i class="fa-solid fa-caret-down"></i></div>
-						</div>
-						<div class="cart-item-content">
-							<h3>Pizza</h3>
-							<span class="quantity">1</span>
-							<span class="multiply">x</span>
-							<span class="price">$20</span>
-						</div>
-						<div class="del-item-btn"><i class="fa-solid fa-xmark"></i></div>
+					<div class="cart-content flex-center">
+
 					</div>
-					<h3 class="total">Total: $40</h3>
-					<a
-						href="#"
-						class="main-btn"
-						>Checkout cart</a
-					>
 				</aside>
 				<form
 					action=""
@@ -118,6 +99,7 @@ export const createHeader = () => {
 	// Shopping Cart *******
 
 	updateCartData();
+	createCartContent();
 
 	$cartIcon.addEventListener("click", () => {
 		$cartContainer.classList.toggle("active");

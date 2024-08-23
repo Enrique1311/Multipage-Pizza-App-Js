@@ -237,21 +237,34 @@ h4 {
 	overflow: hidden;
 }
 
-.cart-item {
-	padding: 0.5rem 0;
-	gap: 0.5rem;
-	width: 100%;
-}
-
 .close-cart {
 	width: 100%;
 	text-align: center;
 }
 
+.cart-content {
+	flex-direction: column;
+}
+
+.cart-content .empty-cart {
+	padding: 3rem;
+}
+
+.cart-items {
+	width: 100%;
+	min-width: 15rem;
+	flex-direction: column;
+}
+
+.cart-item {
+	width: 100%;
+	padding: 0.3rem 0;
+	border-bottom: 1px solid var(--light-grey-color);
+}
+
 .cart-item .del-item-btn i {
 	font-size: 1.5rem;
 	transition: opacity 0.5s;
-	margin-left: 3rem;
 	cursor: pointer;
 }
 
@@ -267,16 +280,17 @@ h4 {
 	color: var(--grey-color);
 	text-align: left;
 	font-size: 0.8rem;
-	max-width: 120px;
 	width: 100%;
 }
 
 .cart-item-content h3 {
+	width: 100%;
+	max-width: 10rem;
 	margin-bottom: 0.2rem;
-	font-size: 1rem;
 }
 
 .cart-item-content span {
+	font-weight: bold;
 	color: var(--text-color);
 }
 
@@ -288,19 +302,19 @@ h4 {
 	font-size: 1.3rem;
 	cursor: pointer;
 	color: var(--text-color);
-	transition: opacity 0.3s linear;
-	padding: 0 0.5rem;
+	margin-right: 0.5rem;
+	padding: 0 0.3rem;
+	transition: all 0.3s linear;
 }
 
 .cart-plus-subt-btns i:hover {
-	opacity: 0.5;
+	background-color: var(--light-grey-color);
+	border-radius: var(--box-radius);
 }
 
-.cart-container .total {
-	border-top: 1px solid var(--light-grey-color);
+.cart-container .total-price {
 	width: 100%;
-	margin-bottom: 0.5rem;
-	padding-top: 1rem;
+	padding: 0.5rem 0;
 }
 
 .cart-container .main-btn {
@@ -837,6 +851,7 @@ footer {
 	gap: 0.5rem;
 }
 
+/* This modal sais that the product has already been added to the cart */
 .modal-container {
 	background-color: #00000099;
 	position: fixed;
@@ -857,7 +872,6 @@ footer {
 	padding: 3rem;
 	width: 20rem;
 	align-items: center;
-	gap: 2rem;
 	text-align: center;
 	border-radius: var(--box-radius);
 	font-size: 1.2rem;
@@ -867,6 +881,7 @@ footer {
 .modal img {
 	width: 10rem;
 	opacity: 0.6;
+	padding-bottom: 2rem;
 }
 
 /** *******************************************************
