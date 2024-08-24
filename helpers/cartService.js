@@ -12,7 +12,7 @@ export const updateCartData = () => {
 };
 
 // This modal says that the product has already been added to the cart
-const openModal = (product) => {
+export const openModal = (product) => {
 	const $modalContainer = document.querySelector(".modal-container");
 
 	$modalContainer.querySelector(".modal").innerHTML = `
@@ -47,7 +47,7 @@ export const createCartContent = () => {
 		$cartContent.innerHTML = `
 			<div class="cart-items flex-col">
 			</div>
-			<h3 class="total-price">Total: $40</h3>
+			<h3 class="total-price"></h3>
 			<a
 				href="#"
 				class="main-btn"
@@ -76,6 +76,20 @@ export const createCartContent = () => {
 			</div>
 
 			`;
+
+			document.querySelector(".cart-plus-btn").addEventListener("click", () => {
+				addToCart(product);
+				openModal(product);
+				createCartContent();
+			});
+
+			document
+				.querySelector(".cart-item .cart-subt-btn")
+				.addEventListener("click", () => {
+					removeProdToCart(product);
+					createCartContent();
+				});
+
 			totalPrice = totalPrice + product.quantity * product.price;
 		});
 		const $totalPrice = document.querySelector(".total-price");
@@ -84,7 +98,7 @@ export const createCartContent = () => {
 };
 
 export const addToCart = (product) => {
-	openModal(product);
+	// openModal(product);
 
 	let memory = JSON.parse(localStorage.getItem("cartItems"));
 	let finalProdQuantity;
@@ -109,5 +123,16 @@ export const addToCart = (product) => {
 		localStorage.setItem("cartItems", JSON.stringify(newMemory));
 		updateCartData();
 		return finalProdQuantity;
+	}
+};
+
+const removeProdToCart = (product) => {
+	let memory = JSON.parse(localStorage.getItem("cartItems"));
+	const productIndex = memory.findIndex((item) => item.id === product.id);
+
+	if (memory[productIndex].quantity === 1) {
+		memory.splice(productIndex, 1);
+		localStorage.setItem("cartItems", JSON.stringify(memory));
+	} else {
 	}
 };

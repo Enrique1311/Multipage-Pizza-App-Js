@@ -1,3 +1,5 @@
+/* General styles **************************************** */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -28,7 +30,13 @@ body {
 	color: var(--text-color);
 }
 
-/* General styles **************************************** */
+main {
+	min-height: calc(100vh - 3.5rem);
+	margin-top: 3.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
 
 .flex-center {
 	display: flex;
@@ -62,10 +70,6 @@ body {
 
 .section-padding {
 	padding: 2rem 5% 2rem 5%;
-}
-
-main {
-	margin-top: 3.5rem;
 }
 
 .section-title {
@@ -194,7 +198,7 @@ h4 {
 	top: calc(100% + 0.5rem);
 	max-width: 600px;
 	right: -600px;
-	padding: 1rem;
+	padding: 1.5rem;
 	color: var(--grey-color);
 	box-shadow: var(--shadow);
 	border-radius: var(--box-radius);
@@ -237,16 +241,16 @@ h4 {
 	overflow: hidden;
 }
 
-.close-cart {
+/* .close-cart {
 	width: 100%;
 	text-align: center;
 }
 
 .cart-content {
 	flex-direction: column;
-}
+} */
 
-.cart-content .empty-cart {
+/* .cart-content .empty-cart {
 	padding: 3rem;
 }
 
@@ -332,7 +336,7 @@ h4 {
 .close-cart i:hover,
 .close-login i:hover {
 	color: var(--primary-color);
-}
+} */
 
 /* Login Form ********************************************** */
 
@@ -341,6 +345,11 @@ h4 {
 	color: var(--secondary-color);
 	flex-direction: column;
 	min-width: 280px;
+}
+
+.close-login {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .active {
@@ -611,6 +620,7 @@ h4 {
 
 footer {
 	background-color: var(--light-grey-color);
+	bottom: 0;
 }
 
 .footer-container {

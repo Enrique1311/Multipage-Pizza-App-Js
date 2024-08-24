@@ -27,7 +27,7 @@ export const createHeader = () => {
 					<a href="contact.html">Contact</a>
 				</nav>
 				<div class="header-icons flex-between">
-					<div class="cart-icon"><i class="fa-solid fa-cart-shopping"></i><p class="cart-amount flex-center"></p></div>
+					<a href="cart.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i><p class="cart-amount flex-center"></p></a>
 					<div class="login-icon"><i class="fa-solid fa-user"></i></div>
 					<div class="menu-icon"></div>
 				</div>
@@ -37,7 +37,6 @@ export const createHeader = () => {
 					</div>					
 					<h3 class="aside-title">Shopping Cart</h3>
 					<div class="cart-content flex-center">
-
 					</div>
 				</aside>
 				<form
@@ -85,9 +84,9 @@ export const createHeader = () => {
 				</nav>
 			</div>`;
 
-	const $cartIcon = d.querySelector(".cart-icon i"),
-		$cartContainer = d.querySelector(".cart-container"),
-		$closeCart = d.querySelector(".close-cart");
+	// const $cartIcon = d.querySelector(".cart-icon i"),
+	// 	$cartContainer = d.querySelector(".cart-container"),
+	// 	$closeCart = d.querySelector(".close-cart");
 
 	const $loginIcon = d.querySelector(".login-icon i"),
 		$loginForm = d.querySelector(".login-form"),
@@ -98,19 +97,19 @@ export const createHeader = () => {
 
 	// Shopping Cart *******
 
-	updateCartData();
-	createCartContent();
+	// updateCartData();
+	// createCartContent();
 
-	$cartIcon.addEventListener("click", () => {
-		$cartContainer.classList.toggle("active");
-		$loginForm.classList.remove("active");
-		$mobileNav.classList.remove("active");
-		drawMenuIcon();
-	});
+	// $cartIcon.addEventListener("click", () => {
+	// 	$cartContainer.classList.toggle("active");
+	// 	$loginForm.classList.remove("active");
+	// 	$mobileNav.classList.remove("active");
+	// 	drawMenuIcon();
+	// });
 
-	$closeCart.addEventListener("click", () => {
-		$cartContainer.classList.remove("active");
-	});
+	// $closeCart.addEventListener("click", () => {
+	// 	$cartContainer.classList.remove("active");
+	// });
 
 	// Login Form ******
 
