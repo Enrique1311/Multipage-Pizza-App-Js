@@ -3,7 +3,6 @@ import { pageHeading } from "../helpers/createPageHeading.js";
 import { createFooter } from "../helpers/createFooter.js";
 import { addToCart } from "../helpers/cartService.js";
 import { openModal } from "../helpers/cartService.js";
-import { createCartContent } from "../helpers/cartService.js";
 
 // Header *******************************************
 createHeader();
@@ -46,7 +45,6 @@ const createMenuItem = (prod, content) => {
 	$newProduct.querySelector("button").addEventListener("click", () => {
 		addToCart(prod);
 		openModal(prod);
-		createCartContent();
 	});
 };
 

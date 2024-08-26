@@ -1,6 +1,7 @@
 import { createHeader } from "../helpers/createHeader.js";
 import { pageHeading } from "../helpers/createPageHeading.js";
 import { createFooter } from "../helpers/createFooter.js";
+import { addToCart, removeProdToCart } from "../helpers/cartService.js";
 
 // Header *******************************************
 createHeader();
@@ -14,74 +15,63 @@ createFooter();
 // Menu Page Content ********************************
 
 const d = document;
+const $cartContainer = d.querySelector(".cart-container");
 
-const getNewProduct = (product) => {
-	const newProduct = product;
-	newProduct.quantity = 1;
-	return newProduct;
-};
-
-export const createCartContent = () => {
-	const $cartContent = document.querySelector(".cart-content");
-	console.log($cartContent);
-
+const createCartContent = () => {
 	let products = JSON.parse(localStorage.getItem("cartItems"));
 
 	let totalPrice = 0;
 
 	if (!products || products.lenght === 0) {
-		$cartContent.innerHTML = `<p class="empty-cart">The cart is empty!</p>`;
-	} else {
-		$cartContent.innerHTML = `
-			<div class="cart-items flex-col">
+		$cartContainer.innerHTML = `
+			<div  class="empty-cart flex-center">
+				<h3>You don´t have products in your Shopping cart!</h3>
+				<a href="./menu.js" class="main-btn">Select products</a>	
 			</div>
-			<h3 class="total-price"></h3>
-			<a
-				href="#"
-				class="main-btn"
-				>Buy now</a
-			>
 		`;
-
+	} else {
 		products.forEach((product) => {
-			const $cartItems = document.querySelector(".cart-items");
-
-			$cartItems.innerHTML += `
-			<div class="cart-item flex-between">
-				<div class="flex-between">
-					<div class="cart-plus-subt-btns">
-						<div class="cart-plus-btn"><i class="fa-solid fa-caret-up"></i></div>
-						<div class="cart-subt-btn"><i class="fa-solid fa-caret-down"></i></div>
+			const $cartItems = d.querySelector(".cart-items");
+			const $newProduct = d.createElement("div");
+			$newProduct.classList.add("flex-between");
+			$newProduct.classList.add("cart-item");
+			$newProduct.innerHTML = `
+					<div class="cart-item-content flex-between">
+						<div class="cart-item-detail flex-between">
+							<div class="flex-between">
+								<button class="cart-subt-btn">
+									<i class="fa-solid fa-minus"></i>
+								</button>						
+								<p class="cart-item-quantity">${product.quantity}</p>
+								<button class="cart-plus-btn flex-center">
+									<i class="fa-solid fa-plus"></i>
+								</button>
+							</div>				
+							<h3>${product.name}</h3>
+						</div>
+						<p>$${product.price * product.quantity}</p>
 					</div>
-					<div class="cart-item-content">
-						<h3>${product.name}</h3>
-						<span class="quantity">${product.quantity}</span>
-						<span class="multiply">x</span>
-						<span class="price">$${product.price}</span>
+					<div class="del-item-btn">
+						<i class="fa-solid fa-xmark"></i>
 					</div>
-				</div>
-				<div class="del-item-btn"><i class="fa-solid fa-xmark"></i></div>
-			</div>
-
+	
 			`;
 
-			document.querySelector(".cart-plus-btn").addEventListener("click", () => {
-				addToCart(product);
-				openModal(product);
+			$cartItems.appendChild($newProduct);
+
+			totalPrice = totalPrice + product.price * product.quantity;
+
+			d.querySelector(".cart-subt-btn").addEventListener("click", () => {
+				$cartContainer.innerHTML = "";
+				removeProdToCart(product);
 				createCartContent();
 			});
 
-			document
-				.querySelector(".cart-item .cart-subt-btn")
-				.addEventListener("click", () => {
-					removeProdToCart(product);
-					createCartContent();
-				});
-
-			totalPrice = totalPrice + product.quantity * product.price;
+			d.querySelector(".cart-plus-btn").addEventListener("click", () => {
+				addToCart(product);
+			});
 		});
-		const $totalPrice = document.querySelector(".total-price");
-		$totalPrice.innerText = `Total: $${totalPrice}`;
+		d.querySelector(".total-price").innerText = `Total: $${totalPrice}`;
 	}
 };
 createCartContent();

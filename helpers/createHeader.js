@@ -1,8 +1,7 @@
 // **************************************************
 // ** Header *******************************************
 
-import { updateCartData } from "./updateCartData.js";
-import { createCartContent } from "./cartService.js";
+import { updateCartData } from "./cartService.js";
 
 export const createHeader = () => {
 	const d = document;
@@ -31,14 +30,7 @@ export const createHeader = () => {
 					<div class="login-icon"><i class="fa-solid fa-user"></i></div>
 					<div class="menu-icon"></div>
 				</div>
-				<aside class="cart-container flex-center aside-container">
-					<div class="close-cart">
-						<i class="fa-solid fa-circle-xmark"></i>
-					</div>					
-					<h3 class="aside-title">Shopping Cart</h3>
-					<div class="cart-content flex-center">
-					</div>
-				</aside>
+
 				<form
 					action=""
 					class="login-form aside-container"
@@ -84,9 +76,7 @@ export const createHeader = () => {
 				</nav>
 			</div>`;
 
-	// const $cartIcon = d.querySelector(".cart-icon i"),
-	// 	$cartContainer = d.querySelector(".cart-container"),
-	// 	$closeCart = d.querySelector(".close-cart");
+	updateCartData();
 
 	const $loginIcon = d.querySelector(".login-icon i"),
 		$loginForm = d.querySelector(".login-form"),
@@ -95,27 +85,10 @@ export const createHeader = () => {
 	const $menuIcon = d.querySelector(".menu-icon"),
 		$mobileNav = d.querySelector(".mobile-nav");
 
-	// Shopping Cart *******
-
-	// updateCartData();
-	// createCartContent();
-
-	// $cartIcon.addEventListener("click", () => {
-	// 	$cartContainer.classList.toggle("active");
-	// 	$loginForm.classList.remove("active");
-	// 	$mobileNav.classList.remove("active");
-	// 	drawMenuIcon();
-	// });
-
-	// $closeCart.addEventListener("click", () => {
-	// 	$cartContainer.classList.remove("active");
-	// });
-
 	// Login Form ******
 
 	$loginIcon.addEventListener("click", () => {
 		$loginForm.classList.toggle("active");
-		$cartContainer.classList.remove("active");
 		$mobileNav.classList.remove("active");
 		drawMenuIcon();
 	});
@@ -139,7 +112,6 @@ export const createHeader = () => {
 	$menuIcon.addEventListener("click", () => {
 		$mobileNav.classList.toggle("active");
 		$loginForm.classList.remove("active");
-		$cartContainer.classList.remove("active");
 		drawMenuIcon();
 	});
 };
