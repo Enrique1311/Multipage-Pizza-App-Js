@@ -67,7 +67,20 @@ export const removeProdToCart = (product) => {
 
 	if (memory[productIndex].quantity === 1) {
 		memory.splice(productIndex, 1);
-		localStorage.setItem("cartItems", JSON.stringify(memory));
 	} else {
+		memory[productIndex].quantity--;
 	}
+
+	localStorage.setItem("cartItems", JSON.stringify(memory));
+	updateCartData();
+};
+
+export const deleteCartItem = (product) => {
+	let memory = JSON.parse(localStorage.getItem("cartItems"));
+	const productIndex = memory.findIndex((item) => item.id === product.id);
+
+	console.log(productIndex);
+	memory.splice(productIndex, 1);
+	localStorage.setItem("cartItems", JSON.stringify(memory));
+	updateCartData();
 };

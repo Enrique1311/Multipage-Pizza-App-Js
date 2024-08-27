@@ -929,7 +929,10 @@ textarea {
 	width: 100%;
 	height: 100%;
 	gap: 2rem;
+	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .empty-cart {
@@ -940,9 +943,14 @@ textarea {
 	gap: 1rem;
 }
 
+.empty-cart img {
+	width: 12rem;
+}
+
 .cart-items {
 	gap: 1rem;
 	width: 100%;
+	flex-direction: column;
 }
 
 .cart-item {
