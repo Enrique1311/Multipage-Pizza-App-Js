@@ -7,6 +7,9 @@ import {
 	removeProdToCart,
 } from "../helpers/cartService.js";
 
+const d = document,
+	$cartContainer = d.querySelector(".cart-container");
+
 // Header *******************************************
 createHeader();
 
@@ -17,9 +20,6 @@ pageHeading("Shopping Cart");
 createFooter();
 
 // Menu Page Content ********************************
-
-const d = document,
-	$cartContainer = d.querySelector(".cart-container");
 
 const createCartContent = () => {
 	$cartContainer.innerHTML = "";
